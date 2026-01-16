@@ -6,14 +6,14 @@ pipeline {
 
     environment {
         SCANNER_HOME = tool 'SonarScanner'
-        DOCKER_IMAGE = 'riyanuddin/frontend:latest'
+        DOCKER_IMAGE = 'mustaqhasan/frontend:latest'
         NAMESPACE    = 'three-tier'
     }
 
     stages {
         stage('Clone') {
             steps {
-                git branch: 'main', changelog: false, poll: false, url: 'https://github.com/riyanuddin17/FSA_Threetier_Project.git'
+                git branch: 'main', changelog: false, poll: false, url: 'https://github.com/Mustaqhasan/jenkins-project'
             }
         }
 
